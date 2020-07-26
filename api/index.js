@@ -1,12 +1,11 @@
-const express = require('express');
-const app = express();
+const router = require('express').Router();
 
 const card = require('./card');
 const list = require('./list');
 const table = require('./table');
 
-app.use(card);
-app.use(list);
-app.use(table);
+router.use(card);
+router.use(list);
+router.use(table);
 
-module.exports = app;
+module.exports = router;
