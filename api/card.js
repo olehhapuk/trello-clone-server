@@ -30,7 +30,7 @@ router.get('/lists/:id/cards', (req, res) => {
 });
 
 router.post('/cards', (req, res) => {
-    const {error} = CardSchema.validate(req.body);
+    const { error } = CardSchema.validate(req.body);
 
     if (!error) {
         cards.insert(req.body).then(newCard => {
